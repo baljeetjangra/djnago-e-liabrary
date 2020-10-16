@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "C:\\Users\\Baljeet\\.virtualenvs\\dj-e-liabrary-MzjMU2MK\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "yapf"
+}
