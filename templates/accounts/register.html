@@ -3,6 +3,13 @@
 <div class="container mt-5">
   <div class="row">
     <div class="offset-3 col-md-6">
+      <div class="m-2 text-center">
+        <h1>Register</h1>
+      </div>
+
+      {% if messages %} {% for message in messages %}
+      <div class="m-2 p-2 rounded alert-danger" id="alert">{{message}}</div>
+      {% endfor %} {% endif %}
       <form action="" method="post">
         {% csrf_token %}
         <div class="form-group">
@@ -46,6 +53,14 @@
           />
         </div>
         <div class="form-group">
+          <label for="author">Choose Type : </label>
+          <select name="user_type" id="">
+            <option value="Reader">Reader</option>
+            <option value="Author">Author</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <input
             required
             class="form-control"
@@ -73,6 +88,12 @@
           class="btn btn-primary w-100"
         />
       </form>
+      <div class="m-2">
+        <h3>
+          Already have an Account?
+          <a href="{% url 'Accounts:login_user' %}">Login Here</a>
+        </h3>
+      </div>
     </div>
   </div>
 </div>
